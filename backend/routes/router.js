@@ -12,7 +12,7 @@ const imagePaths = {
     table1: 'table1.png', dairy1: 'dairy1.png', desksupplies1: 'desksupplies1.png', shoe1: 'shoe1.png', refrigerator1: 'refrigerator1.png'
 };
 
-const imagePathPrefix = 'http://localhost:3025/images/product/';
+const imagePathPrefix = 'http://localhost:3030/images/product/';
 const productImages = Object.keys(imagePaths).reduce((acc, key) => {
     acc[key] = imagePathPrefix + imagePaths[key];
     return acc;
@@ -66,8 +66,25 @@ const productImages = Object.keys(imagePaths).reduce((acc, key) => {
         { id:'016',categories:'Electronics',subcategories:'phones',image: productImages.Samsung8, productName: 'SAMSUNG Galaxy S21+ Plus G996U 5G 128GB - Phantom Silver - (Renewed)', price: "250.00", rating: '4.1' }
       ]
 
+      const userAccount=[
+        { id:'00000001',name: 'Customer', password: '123456', Loginrole: 'Customer', orders: [],adds:[],delivery:[]},
+        { id:'00000002', name: 'Delviery', password: '123456', Loginrole: 'Delviery', orders: [],adds:[],delivery:[] },
+        { id:'00000003',name: 'Manager', password: '123456', Loginrole: 'Manager', orders: [] ,adds:[],delivery:[]},
+        { id:'00000004',name: 'Account Specialist', password: '123456', Loginrole: 'Account Specialist',orders: [],adds:[],delivery:[] },
+        { id:'00000005',name: 'Technician', password: '123456', Loginrole: 'Technician', orders: [],adds:[],delivery:[] },
+        { id:'00000006',name: 'Marketing', password: '123456', Loginrole: 'Marketing', orders: [],adds:[],delivery:[] },
+        { id:'00000007',name: 'Delviery2', password: '123456', Loginrole: 'Delviery', orders: [],adds:[],delivery:[] },
+        { id:'00000008',name: 'Delviery3', password: '123456', Loginrole: 'Delviery', orders: [],adds:[],delivery:[] },
+        { id:'00000009',name: 'Delviery4', password: '123456', Loginrole: 'Delviery', orders: [],adds:[],delivery:[] },
+        { id:'000000010',name: 'Delviery5', password: '123456', Loginrole: 'Delviery', orders: [],adds:[],delivery:[] }
+      ]
+
 router.get('/product', (req, res) => {
     res.json(productsData);
+});
+
+router.get('/userAccount', (req, res) => {
+    res.json(userAccount);
 });
 
 router.get('/', (req, res) => {

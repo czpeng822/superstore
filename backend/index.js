@@ -19,7 +19,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use('/', router);
 
-const port = 3025;
+const port = 3030;
 const server = app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
