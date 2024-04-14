@@ -13,7 +13,6 @@ import { AppContext } from './AppContext';
 import Pagination from '@mui/material/Pagination';
 import ItemDetails from './Item_Information';
 
-
 export default function Product() {
   const { products,cartItems,setCartItems } = useContext(AppContext);
   const [selectedTab, setSelectedTab] = useState('product');

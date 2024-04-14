@@ -12,7 +12,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import BurgerButton from './burgerbutton.js'
-import logo from '../images/logo.png'
 import Account from './Account.js';
 import ShoppingCart from './cart.js'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -131,7 +130,7 @@ export default function PrimarySearchAppBar() {
         {/* Render a NestedMenu component */}
          <BurgerButton anchorEl={anchorEl} onClose={handleMenuClose} st={{background:'#aaa'}}/>
          {/* Render the logo */}
-         <img src={logo} alt="Logo" style={{ width: '75px', height: '75px' }} />
+         <img src={'http://localhost:3030/images/logo.png'} alt="Logo" style={{ width: '75px', height: '75px' }} />
           {/* Render the title of the application */}
           <Typography
             variant="h6"
